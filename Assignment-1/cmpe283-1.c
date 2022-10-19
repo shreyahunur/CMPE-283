@@ -58,12 +58,27 @@ struct capability_info exitbasedcontrols[17] =
 	{25, "Clear IA32_RTIT_CTL"},
 	{26, "Clear IA32_LBR_CTL"},
 	{28, "Load CET state"},
-	{29, "Load PKRS"}
+	{29, "Load PKRS"},
 	{30, "Save IA32_PERF_GLOBAL_CTL"},
 	{31, "Activate secondary controls"}
-}
+};
+struct capability_info entrybasedcontrols[13] =
+{
+    { 2, "Load debug controls" },
+    { 9, "IA-32e mode guest" },
+    { 10, "Entry to SMM" },
+    { 11, "Deactivate dualmonitor treatment" },
+    { 13, "Load IA32_PERF_GLOBAL_CTRL" },
+    { 14, "Load IA32_PAT" },
+    { 15, "Load IA32_EFER" },
+    { 16, "Load IA32_BNDCFGS" },
+    { 17, "Load Conceal VMX from PT" },
+    { 18, "Load IA32_RTIT_CTL" },
+    { 20, "Load CET state" },
+    { 21, "Load guest IA32_LBR_CTL" },
+    { 22, "Load PKRS"}
+};
 
-struct c
 /*
  * report_capability
  *
@@ -112,6 +127,7 @@ detect_vmx_features(void)
 		(uint64_t)(lo | (uint64_t)hi << 32));
 	report_capability(pinbased, 5, lo, hi);
 	report_capability(exitbasedcontrols, 17, lo, hi);
+	report_capability(entrybasedcontrols, 13, lo, hi);
 }
 
 /*
