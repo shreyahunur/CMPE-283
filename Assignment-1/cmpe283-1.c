@@ -111,6 +111,7 @@ detect_vmx_features(void)
 	pr_info("Pinbased Controls MSR: 0x%llx\n",
 		(uint64_t)(lo | (uint64_t)hi << 32));
 	report_capability(pinbased, 5, lo, hi);
+	report_capability(exitbasedcontrols, 17, lo, hi);
 }
 
 /*
@@ -124,6 +125,7 @@ detect_vmx_features(void)
 int
 init_module(void)
 {
+	printk(KERN_INFO "** Submitted By Shreya and Pranika **");
 	printk(KERN_INFO "CMPE 283 Assignment 1 Module Start\n");
 
 	detect_vmx_features();
