@@ -39,6 +39,32 @@ struct capability_info pinbased[5] =
 };
 
 /*
+ * Pinbased capabilities for Exit Control Feilds 
+ * Created struct from SDM volume 3, section 24.7.1
+ */
+struct capability_info exitbasedcontrols[17] = 
+{
+	{2, "Save debug controls"},
+	{9, "Host address-space size"},
+	{12, "Load IA32_PERF_GLOBAL_CTRL"},
+	{15, "Acknowledge interrupt on exit"},
+	{18, "Save IA32_PAT"},
+	{19, "Load IA32_PAT"},
+	{20, "Save IA32_EFER"},
+	{21, "Load IA32_EFER"},
+	{22, "Save VMX-preemption timer value"},
+	{23, "Clear IA32_BNDCFGS"},
+	{24, "Conceal VMX from PT"},
+	{25, "Clear IA32_RTIT_CTL"},
+	{26, "Clear IA32_LBR_CTL"},
+	{28, "Load CET state"},
+	{29, "Load PKRS"}
+	{30, "Save IA32_PERF_GLOBAL_CTL"},
+	{31, "Activate secondary controls"}
+}
+
+struct c
+/*
  * report_capability
  *
  * Reports capabilities present in 'cap' using the corresponding MSR values
