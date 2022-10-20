@@ -43,7 +43,7 @@ struct capability_info pinbased[5] =
 				{7, "Process Posted Interrupts"}};
 
 /*
- * Pinbased capabilities for Exit Control Feilds
+ * Exitbased capabilities 
  * Created struct from SDM volume 3, section 24.7.1
  */
 struct capability_info exitbasedcontrols[17] =
@@ -66,6 +66,10 @@ struct capability_info exitbasedcontrols[17] =
 				{30, "Save IA32_PERF_GLOBAL_CTL"},
 				{31, "Activate secondary controls"}};
 
+/*
+ * Entrybased capabilities 
+ * Created struct from SDM volume 3, section 24.8.1
+ */
 struct capability_info entrybasedcontrols[13] =
 		{
 				{2, "Load debug controls"},
@@ -82,6 +86,10 @@ struct capability_info entrybasedcontrols[13] =
 				{21, "Load guest IA32_LBR_CTL"},
 				{22, "Load PKRS"}};
 
+/*
+ * Procbased capabilities
+ * Created struct from SDM volume 3, section 24.6.2
+ */
 struct capability_info procbasedcontrols[22] =
 		{
 				{2, "Interrupt-window exiting"},
@@ -94,7 +102,8 @@ struct capability_info procbasedcontrols[22] =
 				{15, "CR3-load exiting"},
 				{16, "CR3-store exiting"},
 				{17, "Activate tertiary controls"},
-				{19, "CR8-load exiting"} {20, "CR8-store exiting"},
+				{19, "CR8-load exiting"},
+				{20, "CR8-store exiting"},
 				{21, "Use TPR shadow"},
 				{22, "NMI-window exiting"},
 				{23, "MOV-DR exiting"},
@@ -106,6 +115,10 @@ struct capability_info procbasedcontrols[22] =
 				{30, "PAUSE exiting"},
 				{31, "Activate secondary controls"}};
 
+/*
+ * Procbased Secondary capabilities  
+ * Created struct from SDM volume 3, section 24.6.2
+ */
 struct capability_info procbasedcontrols2[28] =
 		{
 				{0, "Virtualize APIC accesses"},
@@ -127,7 +140,8 @@ struct capability_info procbasedcontrols2[28] =
 				{16, "RDSEED exiting"},
 				{17, "Enable PML"},
 				{18, "EPT-violation #VE"},
-				{19, "Conceal VMX from PT"} {20, "Enable XSAVES/XRSTORS"},
+				{19, "Conceal VMX from PT"},
+				{20, "Enable XSAVES/XRSTORS"},
 				{22, "Mode-based execute control for EPT"},
 				{23, "Sub-page write permissions for EPT"},
 				{24, "Intel PT uses guest physical addresses"},
@@ -136,6 +150,10 @@ struct capability_info procbasedcontrols2[28] =
 				{27, "Enable PCONFIG"},
 				{28, "Enable ENCLV exiting"}};
 
+/*
+ * Procbased Tertiary
+ * Created struct from SDM volume 3, section 24.6.2
+ */
 struct capability_info procbasedcontrols3[4] =
 		{
 				{0, "LOADIWKEY exiting"},
@@ -188,27 +206,37 @@ void detect_vmx_features(void)
 	pr_info("Pinbased Controls MSR: 0x%llx\n",
 					(uint64_t)(lo | (uint64_t)hi << 32));			
 	report_capability(pinbased, 5, lo, hi);
+	pr_info("\n");
 
+	/* Exitbased controls */
 	rdmsr(IA32_VMX_EXIT_CTLS, lo, hi);
 	pr_info("Exitbased Controls MSR: 0x%llx\n",
 					(uint64_t)(lo | (uint64_t)hi << 32));	
 	report_capability(exitbasedcontrols, 17, lo, hi);
+	pr_info("\n");
 
+	/* Entrybased controls */
 	rdmsr(IA32_VMX_ENTRY_CTLS, lo, hi);
 	pr_info("Entrybased Controls MSR: 0x%llx\n",
 					(uint64_t)(lo | (uint64_t)hi << 32));	
 	report_capability(entrybasedcontrols, 13, lo, hi);
+	pr_info("\n");
 
+	/* Procbased controls */
 	rdmsr(IA32_VMX_PROCBASED_CTLS2, lo, hi);
 	pr_info("Procbased Controls MSR: 0x%llx\n",
 					(uint64_t)(lo | (uint64_t)hi << 32));	
 	report_capability(procbasedcontrols, 22, lo, hi);
+	pr_info("\n");
 
+	/* Procbased secondary controls */
 	rdmsr(IA32_VMX_PROCBASED_CTLS2, lo, hi);
 	pr_info("Procbased Controls Secondary MSR: 0x%llx\n",
 					(uint64_t)(lo | (uint64_t)hi << 32));	
 	report_capability(procbasedcontrols2, 28, lo, hi);
+	pr_info("\n");
 
+	/* Procbased tertiary controls */
 	rdmsr(IA32_VMX_PROCBASED_CTLS3, lo, hi);
 	pr_info("Procbased Controls Tertiary MSR: 0x%llx\n",
 					(uint64_t)(lo | (uint64_t)hi << 32));	
