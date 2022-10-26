@@ -46,3 +46,7 @@ demsg
 rmmod cmpe283-1
 
 ```
+
+### Output Screenshots
+
+![alt text](http://url/to/img.png)
