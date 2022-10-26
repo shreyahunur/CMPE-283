@@ -17,15 +17,20 @@ I worked with Pranika to complete this assignment. We first went through the Int
 ### Commands to run the assignment
 
 1. Download the VMWare Workstation
-2. Create a new image using these configurations 
+2. Downloaded ubuntu iso
+3. Created a VM on VMware workstation and assigned RAM of 8GB and 90GB Disk Space,8 cores of processors 
 
+Before : \
 ![Reproduce-Ubuntu-Setup](https://user-images.githubusercontent.com/64269342/198120968-e6064996-174b-439c-983b-5511dedd3cb4.png)
 
+After: \
 ![Reproduce-Ubuntu-Setup-After](https://user-images.githubusercontent.com/64269342/198120983-886e1267-a683-49a1-bf44-709af4f39c77.png)
 
 Note - Enable Nested Virtualization for the image
 
-3. Run the following commands
+4. Used ubuntu iso image for the VM
+5. Enable "Virtualize Intel VT-x/EPT or AMD- V/RVI" checkbox
+6. Run the following commands
 ```bash
 
 # Install make
