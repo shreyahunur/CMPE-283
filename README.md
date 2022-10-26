@@ -1,29 +1,45 @@
-# CMPE-283 
-## Assignment 1
+## CMPE-283 | Assignment 1
 
 Team members: 
-- Pranika Kakkar 
-- Shreya Hunur
+- Pranika Kakkar - 015569983
+- Shreya Hunur - 015269501
 
-Questions: 
+### Individual Contribution
 
 1. For each member in your team, provide 1 paragraph detailing what parts of the lab that member 
 implemented / researched. 
 
-2. Describe in detail the steps you used to complete the assignment. Consider your reader to be someone 
-skilled in software development but otherwise unfamiliar with the assignment. Good answers to this 
-question will be recipes that someone can follow to reproduce your development steps.
 
+### Commands to run the assignment
 
-### Steps for assignment solution
+1. Download the VMWare Workstation
+2. Create a new image using these configurations
 
-### Steps to run and reproduce the assignment
+Note - Enable Nested Virtualization for the image
 
-``
->> make
->> insmod ./cmpe283-1.ko
->> demsg
-``
+3. Run the following commands
+```bash
 
-To Stop a running .ko file and build a new make run 
-`` rmmod cmpe283-1``
+# Install make
+sudo apt intall gcc make
+
+# Check the linux version 
+linux -name 
+>> 5.15.0-52-generic
+
+# Install the linux-headers
+sudo apt-get linux-headers-$(uname -r)
+
+# Check the make file
+make
+
+# Command to insert the module into a kernel
+insmod ./cmpe283-1.ko
+
+# To display the kernel output
+demsg
+
+# To Stop a running .ko file and build a new make run 
+rmmod cmpe283-1
+
+```
