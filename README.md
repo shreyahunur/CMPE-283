@@ -6,9 +6,10 @@ Team members:
 
 ### Individual Contribution
 
-1. We performed the experiment
+We performed the experiment in a group on Shreya's machine
 
 #### Pranika's Contribution
+I worked with Shreya on this assignment. We carefully reviewed the Assignment documentation and video uploaded on Canvas. We noted the expectations of this assignment and started the work. On her machine we performed the initial setup. I downloaded the VMWare workstation iso and downloaded the ubuntu. We tried running the make file and executed the .c code to look at the intial output as shown in the video. We both divided the task of adding the remaining structs and I added structs for ***Exit Controls***, ***Entry Controls*** and ***PinBased Controls*** and the function calls to these capabilities. I helped in code debugging when the execution failed for the .ko file and added comments for better readability. I documented my individual contribution and the steps for reproducing the output.
 
 #### Shreya's Contribution
 
