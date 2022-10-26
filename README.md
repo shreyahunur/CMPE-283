@@ -17,8 +17,11 @@ I worked with Pranika to complete this assignment. We first went through the Int
 ### Commands to run the assignment
 
 1. Download the VMWare Workstation
-2. Downloaded ubuntu iso
-3. Created a VM on VMware workstation and assigned RAM of 8GB and 90GB Disk Space,8 cores of processors 
+2. Download ubuntu iso
+3. Create a VM on VMware workstation and assign 
+- RAM of 8GB
+- 90GB Disk Space 
+- 8 cores of processors 
 
 Before : \
 ![Reproduce-Ubuntu-Setup](https://user-images.githubusercontent.com/64269342/198120968-e6064996-174b-439c-983b-5511dedd3cb4.png)
@@ -28,7 +31,7 @@ After: \
 
 Note - Enable Nested Virtualization for the image
 
-4. Used ubuntu iso image for the VM
+4. Use ubuntu iso image for the VM
 5. Enable "Virtualize Intel VT-x/EPT or AMD- V/RVI" checkbox
 6. Run the following commands
 ```bash
@@ -61,11 +64,10 @@ rmmod cmpe283-1
 
 ![output-1](https://user-images.githubusercontent.com/64269342/198120832-7eaa4551-a0d4-426c-a18e-7caff2f069a0.png)
 
-![output-2](https://user-images.githubusercontent.com/64269342/198120871-e1f2bb11-3c90-4218-b44d-ee4010012e9a.png)
-
 ![output-3](https://user-images.githubusercontent.com/64269342/198120892-c841f6e0-df2e-450f-85d6-c433fc677c69.png)
 
 ![output-4](https://user-images.githubusercontent.com/64269342/198120918-e800a6bb-6b8c-4c69-9261-33432c0e7b82.png)
 
+![output-2](https://user-images.githubusercontent.com/64269342/198120871-e1f2bb11-3c90-4218-b44d-ee4010012e9a.png)
 
 
