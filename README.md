@@ -6,8 +6,11 @@ Team members:
 
 ### Individual Contribution
 
-1. For each member in your team, provide 1 paragraph detailing what parts of the lab that member 
-implemented / researched. 
+1. We performed the experiment
+
+#### Pranika's Contribution
+
+#### Shreya's Contribution
 
 
 ### Commands to run the assignment
