@@ -53,8 +53,6 @@ rmmod cmpe283-1
 
 ### Output Screenshots
 
-![alt text](http://url/to/img.png)
-
 ![output-1](https://user-images.githubusercontent.com/64269342/198120832-7eaa4551-a0d4-426c-a18e-7caff2f069a0.png)
 
 ![output-2](https://user-images.githubusercontent.com/64269342/198120871-e1f2bb11-3c90-4218-b44d-ee4010012e9a.png)
