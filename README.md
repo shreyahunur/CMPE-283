@@ -12,12 +12,12 @@ We performed the experiment in a group on Shreya's machine
 I worked with Shreya on this assignment. We carefully reviewed the Assignment documentation and video uploaded on Canvas. We noted the expectations of this assignment and started the work. On her machine we performed the initial setup. I downloaded the VMWare workstation iso and downloaded the ubuntu. We tried running the make file and executed the .c code to look at the intial output as shown in the video. We both divided the task of adding the remaining structs and I added structs for ***Exit Controls***, ***Entry Controls*** and ***PinBased Controls*** and the function calls to these capabilities. I helped in code debugging when the execution failed for the .ko file and added comments for better readability. I documented my individual contribution and the steps for reproducing the output.
 
 #### Shreya's Contribution
-
+I worked with Pranika to complete this assignment. We first went through the Intel SDM to understand the different types of controls and how they worked. After installation of the VMware workstation, I proceeded to define the capability _info structs of all the ***Procbased controls*** . I added the calls for the same in the detect_vmx_features function.  I created a repository on Github and we both pushed the code to the repo. After merging our code, we tested it on the VM by running make command. We figured out the errors in the code when faced with execution failure. Also added the individual contribution, steps and screenshots of the output.
 
 ### Commands to run the assignment
 
 1. Download the VMWare Workstation
-2. Create a new image using these configurations
+2. Create a new image using these configurations 
 
 ![Reproduce-Ubuntu-Setup](https://user-images.githubusercontent.com/64269342/198120968-e6064996-174b-439c-983b-5511dedd3cb4.png)
 
