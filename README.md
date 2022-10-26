@@ -18,6 +18,10 @@ Team members:
 1. Download the VMWare Workstation
 2. Create a new image using these configurations
 
+![Reproduce-Ubuntu-Setup](https://user-images.githubusercontent.com/64269342/198120968-e6064996-174b-439c-983b-5511dedd3cb4.png)
+
+![Reproduce-Ubuntu-Setup-After](https://user-images.githubusercontent.com/64269342/198120983-886e1267-a683-49a1-bf44-709af4f39c77.png)
+
 Note - Enable Nested Virtualization for the image
 
 3. Run the following commands
@@ -50,3 +54,14 @@ rmmod cmpe283-1
 ### Output Screenshots
 
 ![alt text](http://url/to/img.png)
+
+![output-1](https://user-images.githubusercontent.com/64269342/198120832-7eaa4551-a0d4-426c-a18e-7caff2f069a0.png)
+
+![output-2](https://user-images.githubusercontent.com/64269342/198120871-e1f2bb11-3c90-4218-b44d-ee4010012e9a.png)
+
+![output-3](https://user-images.githubusercontent.com/64269342/198120892-c841f6e0-df2e-450f-85d6-c433fc677c69.png)
+
+![output-4](https://user-images.githubusercontent.com/64269342/198120918-e800a6bb-6b8c-4c69-9261-33432c0e7b82.png)
+
+
+
