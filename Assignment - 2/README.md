@@ -15,12 +15,33 @@ We performed the experiment in a group on Shreya's machine
 
 
 ## Functions performed
-Steps to reproduce
+Installed multiple libraries using following commands:
+
+`sudo apt-get install bison`
+
+`sudo apt install flex `
+
+`aptitude update`
+
+`aptitude search libncurses`
+
+`aptitude install libncurses-dev`
+
+`aptitude install kernel-package`
+
+To compile kernel :
+
+`make-kpkg --initrd binary`
+
+Used `make menuconfig` command to enable loadable module support
+
+#### Steps to reproduce
+
 Edited measurement code in vmx.c and reporting code (writes to eax) in cpuid.c.
 #
 make -j 8 modules
-# sudo bash command
-sudo bash
+# 
+sudo bash command
 #
 make INSTALL_MOD_STRIP=1 modules_install && make install
 #
