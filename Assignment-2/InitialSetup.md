@@ -41,6 +41,21 @@ This shows that nested virtualization is enabled.
 18. Install bison by running `sudo apt-get install bison`
 19. Install `sudo apt-get install libssl-dev`
 20. Install `sudo apt install libelf-dev`
-21. Run `make menuconfig`
-22. Run `make prepare`
+21. In linux folder copy oldconfig file and run `make oldconfig` 
 
+![Screenshot from 2022-11-29 15-15-33](https://user-images.githubusercontent.com/64269342/204669988-e4cccf47-6fef-4d33-87c9-537db386192c.png)
+
+22. Run `make prepare`
+23. Run make -j 8 modules 
+24. Encountered error "make[1]: *** No rule to make target 'debian/canonical-certs.pem', needed by 'certs/x509_certificate_list'.  Stop.
+make: *** [Makefile:1809: certs] Error 2"
+To resolve :
+    In your kernel configuration file you will find this line:
+    CONFIG_SYSTEM_TRUSTED_KEYS="debian/canonical-certs.pem"
+    Change it to this:
+    CONFIG_SYSTEM_TRUSTED_KEYS=""
+25. Run `make -j 8 modules again`
+26. Run `make -j 8`
+27. Command `sudo make modules_install` copies it to lib folder. Instead run `sudo make INSTALL_MOD_STRIP=1 modules_install` to reduce file size and remove debugging info
+28. Run `sudo make install`
+29. 
