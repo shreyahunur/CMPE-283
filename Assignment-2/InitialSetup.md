@@ -31,7 +31,9 @@ This shows that nested virtualization is enabled.
 
 ![Screenshot from 2022-11-29 14-44-09](https://user-images.githubusercontent.com/64269342/204664722-a0666456-b33a-450f-949a-e3ae918c3794.png)
 
+
  15. Run make
+ 
 ![Screenshot from 2022-11-29 14-39-47](https://user-images.githubusercontent.com/64269342/204664084-237c687b-80a7-4cfd-bd0b-a6790a8a1b8e.png)
 
 16. Install ncurses by running `sudo apt install libncurses-dev`
