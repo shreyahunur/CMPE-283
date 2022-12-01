@@ -41,7 +41,9 @@ This shows that nested virtualization is enabled.
 18. Install bison by running `sudo apt-get install bison`
 19. Install `sudo apt-get install libssl-dev`
 20. Install `sudo apt install libelf-dev`
-21. In linux folder copy oldconfig file and run `make oldconfig` 
+21. Install `sudo apt install dwarves`
+22. Install `apt-get install zstd`
+23. In linux folder copy oldconfig file and run `make oldconfig` 
 
 ![Screenshot from 2022-11-29 15-15-33](https://user-images.githubusercontent.com/64269342/204669988-e4cccf47-6fef-4d33-87c9-537db386192c.png)
 
@@ -54,8 +56,22 @@ To resolve :
     CONFIG_SYSTEM_TRUSTED_KEYS="debian/canonical-certs.pem"
     Change it to this:
     CONFIG_SYSTEM_TRUSTED_KEYS=""
-25. Run `make -j 8 modules again`
-26. Run `make -j 8`
-27. Command `sudo make modules_install` copies it to lib folder. Instead run `sudo make INSTALL_MOD_STRIP=1 modules_install` to reduce file size and remove debugging info
-28. Run `sudo make install`
-29. 
+25. Run `make -j 8 modules` again
+
+
+27. Run `make -j 8`
+28. Command `sudo make modules_install` copies it to lib folder. Instead run `sudo make INSTALL_MOD_STRIP=1 modules_install` to reduce file size and remove debugging info
+29. Run `sudo make install`
+30. Run `sudo reboot`
+31. `sudo insmod cmpe283-1.ko`
+32. `lsmod | grep cmpe283`
+33. `dmesg`
+
+![Screenshot from 2022-12-01 11-08-00](https://user-images.githubusercontent.com/64269342/205138800-fe7ae6de-ad09-4e41-a4ea-4b9a76f0c921.png)
+
+34. Run `sudo rmmod cmpe283-1`
+35. Create a folder cmpe283 
+
+
+
+
